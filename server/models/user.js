@@ -21,3 +21,12 @@ UserSchema.methods.comparePassword = async function (candidate) {
 };
 
 module.exports = mongoose.model('User', UserSchema);
+
+// Google OAuth2
+const googleAuth = {
+  clientID: process.env.GOOGLE_CLIENT_ID,
+  clientSecret: process.env.GOOGLE_CLIENT_SECRET,
+  callbackURL: process.env.GOOGLE_CALLBACK_URL || '/api/auth/google/callback'
+};
+
+module.exports.googleAuth = googleAuth;
