@@ -29,4 +29,4 @@ const googleAuth = {
   callbackURL: process.env.GOOGLE_CALLBACK_URL || '/api/auth/google/callback'
 };
 
-module.exports.googleAuth = googleAuth;
+module.exports.googleAuth = googleAuth
